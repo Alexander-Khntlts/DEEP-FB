@@ -47,8 +47,7 @@ luffy = ("""{}                                                       .';'...;dkx
 
 exp = []
 
-Developer = 'Dvanmeploph'
-Author = 'Xenz'
+Author = 'Dvanmeploph'
 Github = 'github.com/Dvanmeploph'
 Version = 'Beta'
 agent = 'Mozilla/5.0 (Linux; Android 10; REALME RMX1911 Build/NMF26F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.111 Mobile Safari/537.36 AlohaBrowser/2.20.3'
@@ -87,7 +86,7 @@ null.close()
 import time, random, json, datetime, re, bs4, base64, platform, shutil
 from bs4 import BeautifulSoup as par
 from bs4 import BeautifulSoup
-from concurrent.futures import ThreadPoolExecutor as xenz
+from concurrent.futures import ThreadPoolExecutor as ferly
 from time import sleep
 from time import strftime
 from rich.console import Console
@@ -136,7 +135,7 @@ PP = '[#ffffff]'
 
 def titik(teks):
 	return "[#ff0000]>[#d0ff00]>[#00ff08]> [#ffffff]{} [#00ff08]<[#d0ff00]<[#ff0000]<".format(teks)
-def Banner_Xenz():
+def Banner_ferly():
 	try:det = exp[0]
 	except:det = 'unknown'
 	teks = ('''{}● {}● {}● {}{}
@@ -172,7 +171,7 @@ class Login:
 			self.Login_Cookies_()
 	def Login_Cookies_(self):
 		os.system('clear')
-		Banner_Xenz()
+		Banner_ferly()
 		print (notice_login)
 		cookie = input(ketik)
 		try:idf = re.search('c_user=(.*?);',str(cookie)).group(1)
@@ -219,7 +218,7 @@ class Login:
 
 	def Login_Cookies(self):
 		os.system('clear')
-		Banner_Xenz()
+		Banner_ferly()
 		print (notice_login)
 		cookie = input(ketik)
 		with requests.Session() as r:
@@ -367,7 +366,7 @@ class Menu:
 		self.List_Menu()
 	def List_Menu(self):
 		os.system('clear')
-		Banner_Xenz()
+		Banner_ferly()
 		teks = '''[#ff0000][[#00ff08]••[#ff0000]][#ffffff] name account : [#00ff08]{}
 [#ff0000][[#00ff08]••[#ff0000]][#ffffff] ID Account   : [#00ff08]{}
 [#ff0000][[#00ff08]••[#ff0000]][#ffffff] IP Address   : [#00ff08]{}
@@ -478,7 +477,7 @@ class Menu:
 		NgehekBang(self.dump)
 	def result(self):
 		os.system("clear")
-		Banner_Xenz()
+		Banner_ferly()
 		teks = '''[#ff0000][[#00ff08]••[#ff0000]][#ffffff] name account : [#00ff08]{}
 [#ff0000][[#00ff08]••[#ff0000]][#ffffff] id account   : [#00ff08]{}
 [#ff0000][[#00ff08]••[#ff0000]][#ffffff] ip address   : [#00ff08]{}
@@ -617,7 +616,7 @@ class NgehekBang:
 	def Notice(self):
 		os.system('clear')
 #		print (luffy)
-		Banner_Xenz()
+		Banner_ferly()
 		teks = '''[#ff0000][[#00ff08]••[#ff0000]][#ffffff] Password tambahan :[#00ff08] {}
 [#ff0000][[#00ff08]••[#ff0000]][#ffffff] Method login      :[#00ff08] {}
 [#ff0000][[#00ff08]••[#ff0000]][#ffffff] Jumlah id dump    :[#00ff08] {}'''.format(','.join(self.pwpw),self.method[0],len(self.dump))
