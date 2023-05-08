@@ -954,4 +954,4 @@ if __name__=='__main__':
 	if col < MC:
 		print("Ukuran layar Termux terlalu kecil. Silakan perbesar layar untuk menjalankan script ini")
 		sys.exit()
-		else:Login()
+	else:Login()
