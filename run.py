@@ -478,7 +478,7 @@ class Menu:
 		NgehekBang(self.dump)
 	def result(self):
 		os.system("clear")
-		Banner_Xenz()
+		Banner_Dvanmeploph()
 		teks = '''[#ff0000][[#00ff08]••[#ff0000]][#ffffff] name account : [#00ff08]{}
 [#ff0000][[#00ff08]••[#ff0000]][#ffffff] id account   : [#00ff08]{}
 [#ff0000][[#00ff08]••[#ff0000]][#ffffff] ip address   : [#00ff08]{}
@@ -617,7 +617,7 @@ class NgehekBang:
 	def Notice(self):
 		os.system('clear')
 #		print (luffy)
-		Banner_Xenz()
+		Banner_Dvanmeploph()
 		teks = '''[#ff0000][[#00ff08]••[#ff0000]][#ffffff] Password tambahan :[#00ff08] {}
 [#ff0000][[#00ff08]••[#ff0000]][#ffffff] Method login      :[#00ff08] {}
 [#ff0000][[#00ff08]••[#ff0000]][#ffffff] Jumlah id dump    :[#00ff08] {}'''.format(','.join(self.pwpw),self.method[0],len(self.dump))
@@ -934,54 +934,6 @@ def check_termux_screen_size():
 #	print (col);exit()
 	return (col)
 
-class license:
-	def __init__(self):
-		try:
-			key = open('data/.lisen.txt','r').read()
-			req = requests.get('https://pastebin.com/raw/yu9r0DhH').text
-			try:
-				link = re.search(f'{key}<=>(.*?);',str(req)).group(1)
-				with requests.Session() as r:
-					try:
-						response = BeautifulSoup(r.get(link).text, 'html.parser')
-						expired = re.findall('''<div class="expire" title="When this paste gets automatically deleted">
-                    (.*?)                </div>''',str(response))[0]
-						exp.append(expired)
-						Login()
-					except Exception as e:
-						print ('Expired Key: '+key)
-						exit()
-			except AttributeError:
-				print ('Silakan beli masa aktif ke admin untuk menjalankan script.')
-				print ('Your Key: '+str(key))
-				print ('Contact me: wa.me/14313411688')
-				exit()
-
-		except FileNotFoundError:
-			user = input('Masukan username: ').upper()
-			satu = (platform.uname())[2]+user
-			dua = satu.encode("utf-8")
-			tiga = base64.b64encode(dua).decode("utf-8").replace('=','')
-			open('data/.lisen.txt','w').write(tiga)
-			license()
-
-def trial():
-	current_date = datetime.datetime.now()
-	check_date = current_date.replace(year=2023, month=3, day=29)
-	if current_date > check_date:license()
-	else:
-		with requests.Session() as r:
-			link = r.get('https://pastebin.com/raw/eS7xX6Vf').text
-			try:
-				response = BeautifulSoup(r.get(link).text, 'html.parser')
-				expired = re.findall('''<div class="expire" title="When this paste gets automatically deleted">
-                    (.*?)                </div>''',str(response))[0]
-				exp.append(expired)
-				Login()
-			except Exception:
-				print ('Waktu trial telah habis...')
-				sleep(2)
-				license()
 def loger(coki, pw):
 	with requests.Session() as r:
 		cookie = {'cookie':coki}
