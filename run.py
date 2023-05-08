@@ -367,7 +367,7 @@ class Menu:
 		self.List_Menu()
 	def List_Menu(self):
 		os.system('clear')
-		Banner_Xenz()
+		Banner_Dvanmeploph()
 		teks = '''[#ff0000][[#00ff08]••[#ff0000]][#ffffff] name account : [#00ff08]{}
 [#ff0000][[#00ff08]••[#ff0000]][#ffffff] ID Account   : [#00ff08]{}
 [#ff0000][[#00ff08]••[#ff0000]][#ffffff] IP Address   : [#00ff08]{}
@@ -956,4 +956,4 @@ if __name__=='__main__':
 		sys.exit()
 	else:
 	    os.system('mkdir data')
-	Login()
+		Login()
