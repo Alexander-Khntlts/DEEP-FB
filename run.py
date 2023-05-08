@@ -139,7 +139,7 @@ PP = '[#ffffff]'
 
 def titik(teks):
 	return "[#ff0000]>[#d0ff00]>[#00ff08]> [#ffffff]{} [#00ff08]<[#d0ff00]<[#ff0000]<".format(teks)
-def Banner_Xenz():
+def Dvanmeploph():
 	try:det = exp[0]
 	except:det = 'unknown'
 	teks = ('''{}● {}● {}● {}{}
@@ -632,7 +632,7 @@ class NgehekBang:
 		tampung_notice.append(Panel(f"[#ffffff]result [#d0ff00]cp [#ffffff]saved in: [#d0ff00]{cpcp}",style=warna_rich,width=46,title='[#2600ff][[#00ff08]•[#2600ff]]'))
 		Console().print(Columns(tampung_notice))
 		Console().print(Panel('[#ffffff]                    nyalakan/matikan mode pesawat setiap dapat result',title=titik('notice')),style=warna_rich,width=92)
-		with xenz(max_workers=16) as brute:
+		with Dvanmeploph(max_workers=16) as brute:
 			try:
 				self.dump.sort(reverse=True)
 				for data in self.dump:
