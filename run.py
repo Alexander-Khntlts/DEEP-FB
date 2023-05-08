@@ -1,9 +1,6 @@
-# !/usr/bin/python3
-# coding=utf-8
-# Coded By   [ Xenz404 ]
-# Developed By : [ Dvanmeploph Afriliyan Ferly ]
-# Jangan Ganti Bot Komennya
-# Recode? Boleh, Asal Cantumkan Nama Author And Developer
+#!/usr/bin/python3
+#coding=utf-8
+
 N,M,K,H,B,U,C,P = "\x1b[00m","\x1b[38;2;255;0;0m","\x1b[38;2;208;255;0m","\x1b[38;2;0;255;8m","\x1b[38;2;38;0;255m","\x1b[38;2;234;0;255m","\x1b[38;2;0;221;255m","\x1b[1;97m"
 luffy = ("""{}                                                       .';'...;dkxo;.                               
                                    ...             ..;lOKXNKKXNWMMMNO,                              
@@ -90,7 +87,7 @@ null.close()
 import time, random, json, datetime, re, bs4, base64, platform, shutil
 from bs4 import BeautifulSoup as par
 from bs4 import BeautifulSoup
-from concurrent.futures import ThreadPoolExecutor as Dvanmeploph
+from concurrent.futures import ThreadPoolExecutor as xenz
 from time import sleep
 from time import strftime
 from rich.console import Console
@@ -139,7 +136,7 @@ PP = '[#ffffff]'
 
 def titik(teks):
 	return "[#ff0000]>[#d0ff00]>[#00ff08]> [#ffffff]{} [#00ff08]<[#d0ff00]<[#ff0000]<".format(teks)
-def Dvanmeploph():
+def Banner_Xenz():
 	try:det = exp[0]
 	except:det = 'unknown'
 	teks = ('''{}● {}● {}● {}{}
@@ -175,7 +172,7 @@ class Login:
 			self.Login_Cookies_()
 	def Login_Cookies_(self):
 		os.system('clear')
-		Banner_Dvanmeploph()
+		Banner_Xenz()
 		print (notice_login)
 		cookie = input(ketik)
 		try:idf = re.search('c_user=(.*?);',str(cookie)).group(1)
@@ -222,7 +219,7 @@ class Login:
 
 	def Login_Cookies(self):
 		os.system('clear')
-		Banner_Dvanmeploph()
+		Banner_Xenz()
 		print (notice_login)
 		cookie = input(ketik)
 		with requests.Session() as r:
@@ -370,7 +367,7 @@ class Menu:
 		self.List_Menu()
 	def List_Menu(self):
 		os.system('clear')
-		Banner_Dvanmeploph()
+		Banner_Xenz()
 		teks = '''[#ff0000][[#00ff08]••[#ff0000]][#ffffff] name account : [#00ff08]{}
 [#ff0000][[#00ff08]••[#ff0000]][#ffffff] ID Account   : [#00ff08]{}
 [#ff0000][[#00ff08]••[#ff0000]][#ffffff] IP Address   : [#00ff08]{}
@@ -481,7 +478,7 @@ class Menu:
 		NgehekBang(self.dump)
 	def result(self):
 		os.system("clear")
-		Banner_Dvanmeploph()
+		Banner_Xenz()
 		teks = '''[#ff0000][[#00ff08]••[#ff0000]][#ffffff] name account : [#00ff08]{}
 [#ff0000][[#00ff08]••[#ff0000]][#ffffff] id account   : [#00ff08]{}
 [#ff0000][[#00ff08]••[#ff0000]][#ffffff] ip address   : [#00ff08]{}
@@ -620,7 +617,7 @@ class NgehekBang:
 	def Notice(self):
 		os.system('clear')
 #		print (luffy)
-		Banner_Dvanmeploph()
+		Banner_Xenz()
 		teks = '''[#ff0000][[#00ff08]••[#ff0000]][#ffffff] Password tambahan :[#00ff08] {}
 [#ff0000][[#00ff08]••[#ff0000]][#ffffff] Method login      :[#00ff08] {}
 [#ff0000][[#00ff08]••[#ff0000]][#ffffff] Jumlah id dump    :[#00ff08] {}'''.format(','.join(self.pwpw),self.method[0],len(self.dump))
@@ -632,7 +629,7 @@ class NgehekBang:
 		tampung_notice.append(Panel(f"[#ffffff]result [#d0ff00]cp [#ffffff]saved in: [#d0ff00]{cpcp}",style=warna_rich,width=46,title='[#2600ff][[#00ff08]•[#2600ff]]'))
 		Console().print(Columns(tampung_notice))
 		Console().print(Panel('[#ffffff]                    nyalakan/matikan mode pesawat setiap dapat result',title=titik('notice')),style=warna_rich,width=92)
-		with Dvanmeploph(max_workers=16) as brute:
+		with xenz(max_workers=16) as brute:
 			try:
 				self.dump.sort(reverse=True)
 				for data in self.dump:
@@ -958,4 +955,5 @@ if __name__=='__main__':
 		print("Ukuran layar Termux terlalu kecil. Silakan perbesar layar untuk menjalankan script ini")
 		sys.exit()
 	else:
+	    os.system('mkdir data')
 		Login()
