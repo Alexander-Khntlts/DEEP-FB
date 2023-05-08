@@ -90,7 +90,7 @@ null.close()
 import time, random, json, datetime, re, bs4, base64, platform, shutil
 from bs4 import BeautifulSoup as par
 from bs4 import BeautifulSoup
-from concurrent.futures import ThreadPoolExecutor as ferly
+from concurrent.futures import ThreadPoolExecutor as Dvanmeploph
 from time import sleep
 from time import strftime
 from rich.console import Console
