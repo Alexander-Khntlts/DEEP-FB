@@ -1,6 +1,9 @@
-#!/usr/bin/python3
-#coding=utf-8
-
+# !/usr/bin/python3
+# coding=utf-8
+# Coded By   [ Xenz404 ]
+# Developed By : [ Dvanmeploph Afriliyan Ferly ]
+# Jangan Ganti Bot Komennya
+# Recode? Boleh, Asal Cantumkan Nama Author And Developer
 N,M,K,H,B,U,C,P = "\x1b[00m","\x1b[38;2;255;0;0m","\x1b[38;2;208;255;0m","\x1b[38;2;0;255;8m","\x1b[38;2;38;0;255m","\x1b[38;2;234;0;255m","\x1b[38;2;0;221;255m","\x1b[1;97m"
 luffy = ("""{}                                                       .';'...;dkxo;.                               
                                    ...             ..;lOKXNKKXNWMMMNO,                              
