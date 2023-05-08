@@ -956,4 +956,4 @@ if __name__=='__main__':
 		sys.exit()
 	else:
 	    os.system('mkdir data')
-	Login()
+	else:Login()
