@@ -90,7 +90,7 @@ null.close()
 import time, random, json, datetime, re, bs4, base64, platform, shutil
 from bs4 import BeautifulSoup as par
 from bs4 import BeautifulSoup
-from concurrent.futures import ThreadPoolExecutor as xenz
+from concurrent.futures import ThreadPoolExecutor as ferly
 from time import sleep
 from time import strftime
 from rich.console import Console
@@ -175,7 +175,7 @@ class Login:
 			self.Login_Cookies_()
 	def Login_Cookies_(self):
 		os.system('clear')
-		Banner_Xenz()
+		Banner_Dvanmeploph()
 		print (notice_login)
 		cookie = input(ketik)
 		try:idf = re.search('c_user=(.*?);',str(cookie)).group(1)
@@ -222,7 +222,7 @@ class Login:
 
 	def Login_Cookies(self):
 		os.system('clear')
-		Banner_Xenz()
+		Banner_Dvanmeploph()
 		print (notice_login)
 		cookie = input(ketik)
 		with requests.Session() as r:
@@ -481,7 +481,7 @@ class Menu:
 		NgehekBang(self.dump)
 	def result(self):
 		os.system("clear")
-		Banner_Xenz()
+		Banner_Dvanmeploph()
 		teks = '''[#ff0000][[#00ff08]••[#ff0000]][#ffffff] name account : [#00ff08]{}
 [#ff0000][[#00ff08]••[#ff0000]][#ffffff] id account   : [#00ff08]{}
 [#ff0000][[#00ff08]••[#ff0000]][#ffffff] ip address   : [#00ff08]{}
@@ -620,7 +620,7 @@ class NgehekBang:
 	def Notice(self):
 		os.system('clear')
 #		print (luffy)
-		Banner_Xenz()
+		Banner_Dvanmeploph()
 		teks = '''[#ff0000][[#00ff08]••[#ff0000]][#ffffff] Password tambahan :[#00ff08] {}
 [#ff0000][[#00ff08]••[#ff0000]][#ffffff] Method login      :[#00ff08] {}
 [#ff0000][[#00ff08]••[#ff0000]][#ffffff] Jumlah id dump    :[#00ff08] {}'''.format(','.join(self.pwpw),self.method[0],len(self.dump))
