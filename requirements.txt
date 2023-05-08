@@ -8,3 +8,4 @@ pystyle
 fake_useragent
 stdiomask
 inquirer
+fbthon
